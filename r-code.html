@@ -48,6 +48,8 @@
 <li><a class="" href="gitignore.html"><span class="header-section-number">14</span> The .gitignore file</a></li>
 <li><a class="" href="conclusion.html"><span class="header-section-number">15</span> Conclusion</a></li>
 <li><a class="" href="references-1.html">References</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
 </ul>
 
         <div class="book-extra">
@@ -83,18 +85,18 @@ There are however some best practice guidelines that <a href="https://bioconduct
 <li>Use <code><a href="https://rdrr.io/r/base/system2.html">system2()</a></code> instead of <code><a href="https://rdrr.io/r/base/system.html">system()</a></code>.</li>
 <li>Do not use <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> in any internal <i class="fab fa-r-project"></i> code.</li>
 <li>Do not use <code><a href="https://rdrr.io/r/base/browser.html">browser()</a></code> in any internal <i class="fab fa-r-project"></i> code.</li>
-<li>Avoid the use of <code><a href="https://rdrr.io/r/base/assignOps.html">&lt;&lt;-</a></code>.</li>
-<li>Avoid use of direct slot access with <code><a href="https://rdrr.io/r/base/slotOp.html">@</a></code> or <code>slot()</code>.
+<li>Avoid the use of <code>&lt;&lt;-</code>.</li>
+<li>Avoid use of direct slot access with <code>@</code> or <code>slot()</code>.
 Accessor methods should be created and utilized</li>
 <li>Use the packages <em><a href="https://bioconductor.org/packages/3.13/ExperimentHub">ExperimentHub</a></em> and <em><a href="https://bioconductor.org/packages/3.13/AnnotationHub">AnnotationHub</a></em> instead of downloading external data from unsanctioned providers such as <i class="fab fa-github"></i> GitHub, <i class="fa fa-dropbox" aria-hidden="true"></i> Dropbox, etc.</li>
-<li>Use <code><a href="https://rdrr.io/r/base/assignOps.html">&lt;-</a></code> instead of <code><a href="https://rdrr.io/r/base/assignOps.html">=</a></code> for assigning variables outside function calls.</li>
+<li>Use <code>&lt;-</code> instead of <code>=</code> for assigning variables outside function calls.</li>
 </ul>
 <div id="formatting-and-syntax" class="section level3" number="10.2.1">
 <h3>
 <span class="header-section-number">10.2.1</span> Formatting and syntax<a class="anchor" aria-label="anchor" href="#formatting-and-syntax"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li>Use <code><a href="https://rdrr.io/r/base/assignOps.html">&lt;-</a></code> instead of = for assignment.</li>
+<li>Use <code>&lt;-</code> instead of = for assignment.</li>
 <li>Function names should be <code>camelCase</code> or utilize the underscore <code>_</code> and not have a dot <code>.</code> (which indicates S3 dispatch).</li>
 <li>Use <code><a href="https://rdrr.io/r/grDevices/dev.html">dev.new()</a></code> to start a graphics drive if necessary.
 Avoid using <code><a href="https://rdrr.io/r/grDevices/x11.html">x11()</a></code> or <code><a href="https://rdrr.io/r/grDevices/x11.html">X11()</a></code>, for it can only be called on machines that have access to an X server.</li>
@@ -144,7 +146,7 @@ Check arguments against a validity check.</p>
 <span class="header-section-number">10.2.6</span> Vectorization<a class="anchor" aria-label="anchor" href="#vectorization"><i class="fas fa-link"></i></a>
 </h3>
 <p>Vectorize!</p>
-<p>Many R operations are performed on the whole object, not just the elements of the object (e.g., <code><a href="https://rdrr.io/r/base/sum.html">sum(x)</a></code> instead of <code>x[1] + x[2] + x[2] + ...</code>).
+<p>Many R operations are performed on the whole object, not just the elements of the object (e.g., <code>sum(x)</code> instead of <code>x[1] + x[2] + x[2] + ...</code>).
 In particular, relatively few situations require an explicit <code>for</code> loop.
 See the <a href="https://bioconductor.org/developers/how-to/efficient-code/#vectorize">Vectorize</a> section of <a href="https://bioconductor.org/developers/how-to/efficient-code">Robust and Efficient Code for additional detail</a>.</p>
 </div>
@@ -219,7 +221,7 @@ Please use <em><a href="https://bioconductor.org/packages/3.13/BiocFileCache">Bi
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Bioconductor Package Guidelines for Developers and Reviewers</strong>" was written by Kevin Rue-Albrecht. It was last built on 2021-05-21.</p>
+    <p>"<strong>Bioconductor Package Guidelines for Developers and Reviewers</strong>" was written by Kevin Rue-Albrecht. It was last built on 2021-06-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
